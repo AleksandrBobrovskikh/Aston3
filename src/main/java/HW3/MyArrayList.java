@@ -152,11 +152,11 @@ public class MyArrayList<T extends Comparable<T>> {
         while (i <= mid && j <= right)
             temp[k++] = ((T) elements[i]).compareTo((T) elements[j]) < 0 ? elements[i++] : elements[j++];
 
-        while (i <= mid) temp[k++] = elements[i++];
-        while (j <= right) temp[k++] = elements[j++];
+        while (i <= mid)
+            temp[k++] = elements[i++];
+        while (j <= right)
+            temp[k++] = elements[j++];
 
         System.arraycopy(temp, left, elements, left, right - left + 1);
     }
-
-
 }
