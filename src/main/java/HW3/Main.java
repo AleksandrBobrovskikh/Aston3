@@ -5,6 +5,8 @@ public class Main {
         MyArrayList<Integer> list = new MyArrayList<>();
         list.add(1);
         list.print();
+        list.add(1);
+        list.print();
     }
     }
 
