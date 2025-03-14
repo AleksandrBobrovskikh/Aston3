@@ -7,6 +7,8 @@ public class Main {
         list.print();
         list.add(1);
         list.print();
+        list.add(1);
+        list.print();
     }
     }
 
