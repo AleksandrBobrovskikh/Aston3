@@ -18,13 +18,14 @@
 package HW3;
 
 public class MyArrayList<T extends Comparable<T>> {
+    private final int DEFAULT_CAPACITY = 10;
     private int size;
     private int capacity;
     private Object[] elements;
 
     public MyArrayList() {
         this.size = 0;
-        this.capacity = 10;
+        this.capacity = DEFAULT_CAPACITY;
         this.elements = new Object[this.capacity];
     }
 
@@ -34,13 +35,13 @@ public class MyArrayList<T extends Comparable<T>> {
         this.elements = new Object[this.capacity];
     }
 
-    public void add(Object o) {
+    public void add(T o) {
         extension(elements);
         elements[size] = o;
         size++;
     }
 
-    public void add(int index, Object o) {
+    public void add(int index, T o) {
         extension(elements);
         System.arraycopy(elements, index, elements, index + 1, size - index);
         elements[index] = o;
@@ -81,7 +82,7 @@ public class MyArrayList<T extends Comparable<T>> {
         }
     }
 
-    public boolean contains(Object o) {
+    public boolean contains(T o) {
         for (int i = 0; i < size; i++) {
             if (elements[i].equals(o)) {
                 return true;
@@ -111,7 +112,7 @@ public class MyArrayList<T extends Comparable<T>> {
         return null;
     }
 
-    public boolean remove(Object o) {
+    public boolean remove(T o) {
         for (int i = 0; i < size; i++) {
             if (elements[i].equals(o)) {
                 System.arraycopy(elements, i + 1, elements, i, size - i - 1);

@@ -1,19 +1,19 @@
 /**
  * Реализованы методы:
- *  add(T data)
- *  addLast(T data)
- *  addFirst(T data)
- *  add(int index, T data)
- *  removeFirst()
- *  removeLast()
- *  remove(int index)
- *  set(int index, T data)
- *  get(int index)
- *  print()
- *  size()
- *  quickSort()
- *  isEmpty()
- *  clear()
+ * add(T data)
+ * addLast(T data)
+ * addFirst(T data)
+ * add(int index, T data)
+ * removeFirst()
+ * removeLast()
+ * remove(int index)
+ * set(int index, T data)
+ * get(int index)
+ * print()
+ * size()
+ * quickSort()
+ * isEmpty()
+ * clear()
  */
 
 package HW3;
@@ -147,16 +147,15 @@ public class MyLinkedList<T extends Comparable<T>> {
         }
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return size == 0;
     }
 
-    public void clear(){
+    public void clear() {
         head = null;
         tail = null;
         size = 0;
     }
-
 
     public T get(int index) {
         if (index < 0 || index >= size) {
@@ -182,7 +181,6 @@ public class MyLinkedList<T extends Comparable<T>> {
         }
         System.out.println("]");
     }
-
 
     public void quickSort() {
         quickSort(head, tail);
@@ -215,6 +213,4 @@ public class MyLinkedList<T extends Comparable<T>> {
         first.data = second.data;
         second.data = temp;
     }
-
-
 }
